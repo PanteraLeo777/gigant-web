@@ -31,7 +31,6 @@
             background-image: url('stromecky.jpeg');
             background-size: cover;
             background-position: left top;
-            /* Vždy zleva shora */
             background-repeat: no-repeat;
             width: 100%;
             display: flex;
@@ -58,7 +57,6 @@
             background-color: #ffffff;
         }
 
-        /* Novinky na jeden řádek */
         #news-content {
             display: inline;
         }
@@ -72,20 +70,18 @@
 <body class="bg-slate-100 text-slate-900">
 
     <nav class="bg-white sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 pt-8 pb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div
+            class="max-w-[1920px] mx-auto pt-8 pb-6 flex flex-col md:flex-row justify-between items-center gap-6 md:pl-[120px] md:pr-12">
             <div class="flex items-center justify-center w-full md:w-auto">
                 <img src="logoskloboukem.png" alt="Logo" class="h-16 w-auto object-contain">
             </div>
-
             <div class="flex flex-wrap justify-center gap-4 md:gap-8 font-bold text-sm text-slate-600 items-center">
                 <a href="#race-info" class="hover:text-red-600 transition">PROGRAM</a>
                 <a href="#documents" class="hover:text-red-600 transition">INFO</a>
                 <a href="#gallery" class="hover:text-red-600 transition">FOTO</a>
-
-                <div class="flex items-center gap-4 border-l pl-4 border-slate-200">
-                    <a href="https://www.facebook.com/gigant.orienteering/" target="_blank"
-                        class="text-blue-600 hover:opacity-80 transition">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                <div class="flex items-center gap-4">
+                    <a href="#contacts" class="text-blue-600 hover:opacity-80 transition">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
                     </a>
                     <div class="flex gap-2 text-xs uppercase tracking-widest ml-2">
                         <a href="index.html" class="text-red-600">CZ</a>
@@ -98,20 +94,18 @@
     </nav>
 
     <header class="hero-background border-b-8 border-red-600 header-shadow-intense min-h-[400px] md:min-h-[600px]">
-        <div class="max-w-7xl mx-auto px-6 w-full">
-            <div class="max-w-xl text-center lg:text-left text-white py-12 md:py-20 lg:ml-0">
+        <div class="w-full md:pl-[150px] px-6">
+            <div class="max-w-xl text-center md:text-left text-white py-12 md:py-20">
                 <h2 class="font-bold tracking-tight leading-tight">
                     <span class="text-4xl md:text-7xl block">MTBO</span>
                     <span class="text-3xl md:text-5xl block opacity-90">VIZOVICE 2026</span>
                 </h2>
-                <p class="text-base md:text-xl font-light mt-4 mb-6 md:mb-8 opacity-100 italic">
-                    ČESKÝ POHÁR 8. - 10. KVĚTNA
-                </p>
+                <p class="text-base md:text-xl font-light mt-4 mb-6 md:mb-8 opacity-100 italic">ČESKÝ POHÁR 8. - 10.
+                    KVĚTNA</p>
                 <div class="inline-block">
                     <span
-                        class="border-2 border-white px-4 py-2 md:px-6 md:py-3 font-bold text-sm md:text-lg tracking-widest whitespace-nowrap">
-                        WORLD MASTERS SERIES
-                    </span>
+                        class="border-2 border-white px-4 py-2 md:px-6 md:py-3 font-bold text-sm md:text-lg tracking-widest whitespace-nowrap">WORLD
+                        MASTERS SERIES</span>
                 </div>
             </div>
         </div>
@@ -121,19 +115,16 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="flex flex-wrap items-baseline gap-x-2">
                 <h3 class="text-lg font-bold text-red-600 flex items-center gap-2 whitespace-nowrap">
-                    <i data-lucide="megaphone" class="w-5 h-5"></i>
-                    UPOZORNĚNÍ:
+                    <i data-lucide="megaphone" class="w-5 h-5"></i> UPOZORNĚNÍ:
                 </h3>
-                <div id="news-content" class="text-base text-slate-800 font-semibold italic">
-                </div>
+                <div id="news-content" class="text-base text-slate-800 font-semibold italic"></div>
             </div>
         </div>
     </section>
 
-    <section id="race-info" class="py-16 md:py-24 bg-slate-50 relative">
+    <section id="race-info" class="scroll-mt-24 py-16 md:py-24 bg-slate-50 relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
-                PROGRAM ZÁVODŮ
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">PROGRAM ZÁVODŮ
             </h3>
             <div class="space-y-4 text-left">
                 <a href="https://oris.ceskyorientak.cz/Zavod?id=9676"
@@ -173,11 +164,9 @@
         </div>
     </section>
 
-    <section id="documents" class="py-16 md:py-24 bg-white relative">
+    <section id="documents" class="scroll-mt-24 py-16 md:py-24 bg-white relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
-                INFORMACE
-            </h3>
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">INFORMACE</h3>
             <div class="space-y-4 text-left">
                 <a href="rozpis.pdf" target="_blank"
                     class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
@@ -203,32 +192,27 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-16 md:py-24 bg-slate-100">
+    <section id="gallery" class="scroll-mt-24 py-16 md:py-24 bg-slate-100">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
-                FOTOGALERIE
-            </h3>
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">FOTOGALERIE</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="aspect-video bg-slate-300 rounded overflow-hidden shadow-md">
-                    <img src="fotogalerie/1.jpg" alt="Foto 1"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                    <img src="fotogalerie/1.jpg" alt="Foto 1" class="w-full h-full"
                         onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 1</div>'">
                 </div>
                 <div class="aspect-video bg-slate-300 rounded overflow-hidden shadow-md">
-                    <img src="fotogalerie/2.jpg" alt="Foto 2"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                    <img src="fotogalerie/2.jpg" alt="Foto 2" class="w-full h-full"
                         onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 2</div>'">
                 </div>
                 <div class="aspect-video bg-slate-300 rounded overflow-hidden shadow-md">
-                    <img src="fotogalerie/3.jpg" alt="Foto 3"
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                    <img src="fotogalerie/3.jpg" alt="Foto 3" class="w-full h-full"
                         onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 3</div>'">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-16">
+    <footer id="contacts" class="bg-slate-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
                 <div>
@@ -238,13 +222,17 @@
                 <div class="space-y-4">
                     <h4 class="font-bold text-xl border-b border-slate-700 pb-2 inline-block">KONTAKTY</h4>
                     <div class="flex flex-col gap-3 opacity-80">
-                        <a href="mailto:info@gigant.cz"
+                        <a href="mailto:info@gigantorienteering.cz"
                             class="flex items-center justify-center md:justify-start gap-3 hover:text-red-500 transition">
                             <i data-lucide="mail" class="w-5 h-5"></i> info@gigantorienteering.cz
                         </a>
-                        <a href="https://www.gigant.cz" target="_blank"
+                        <a href="tel:+420603830727"
                             class="flex items-center justify-center md:justify-start gap-3 hover:text-red-500 transition">
                             <i data-lucide="phone" class="w-5 h-5"></i> +420 603 830 727
+                        </a>
+                        <a href="https://www.facebook.com/gigant.orienteering/" target="_blank"
+                            class="flex items-center justify-center md:justify-start gap-3 hover:text-red-500 transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i> Facebook
                         </a>
                     </div>
                 </div>
@@ -254,20 +242,13 @@
 
     <script>
         lucide.createIcons();
-
-        fetch('novinky.txt')
-            .then(response => {
-                if (!response.ok) throw new Error('Prázdné');
-                return response.text();
-            })
-            .then(text => {
-                const cleanText = text.trim();
-                if (cleanText.length > 2) {
-                    document.getElementById('news-content').innerText = cleanText;
-                    document.getElementById('news-section').style.display = 'block';
-                }
-            })
-            .catch(err => console.log('Žádné novinky k zobrazení'));
+        fetch('novinky.txt').then(r => r.text()).then(t => {
+            const c = t.trim();
+            if (c.length > 2) {
+                document.getElementById('news-content').innerText = c;
+                document.getElementById('news-section').style.display = 'block';
+            }
+        });
     </script>
 </body>
 
