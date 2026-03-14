@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="cs" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigant Orienteering</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+        :root {
+            --primary-blue: #2B3B5C;
+            --accent-red: #e30613;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .hero-background {
+            background-image: url('stromecky.jpeg');
+            background-size: cover;
+            background-position: left center;
+            background-repeat: no-repeat;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-shadow-intense {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        .solid-red-underline {
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .etape-button {
+            background-color: #f8fafc;
+            border-left: 8px solid var(--accent-red);
+            transition: background-color 0.2s ease;
+        }
+
+        .etape-button:hover {
+            background-color: #ffffff;
+        }
+
+        #news-content {
+            white-space: pre-wrap;
+        }
+
+        /* Skryje sekci aktualit předem */
+        #news-section {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 text-slate-900">
+
+    <nav class="bg-white sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 pt-8 pb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center justify-center w-full md:w-auto">
+                <img src="logoskloboukem.png" alt="Logo" class="h-16 w-auto object-contain">
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 font-bold text-sm text-slate-600 items-center">
+                <a href="#race-info" class="hover:text-red-600 transition">PROGRAM</a>
+                <a href="#documents" class="hover:text-red-600 transition">INFO</a>
+                <a href="#gallery" class="hover:text-red-600 transition">FOTO</a>
+
+                <div class="flex items-center gap-4 border-l pl-4 border-slate-200">
+                    <a href="https://www.facebook.com/gigant.orienteering/" target="_blank"
+                        class="text-blue-600 hover:opacity-80 transition">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <div class="flex gap-2 text-xs uppercase tracking-widest ml-2">
+                        <a href="index.html" class="text-red-600">CZ</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="en.html" class="hover:text-red-600 transition">EN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-background border-b-8 border-red-600 header-shadow-intense min-h-[400px] md:min-h-[600px]">
+        <div class="max-w-7xl mx-auto px-6 w-full">
+            <div class="w-full lg:w-1/3 text-center lg:text-left text-white py-12 md:py-20">
+                <h2 class="font-bold tracking-tight leading-tight">
+                    <span class="text-4xl md:text-7xl block">MTBO</span>
+                    <span class="text-3xl md:text-5xl block opacity-90">VIZOVICE 2026</span>
+                </h2>
+                <p class="text-base md:text-xl font-light mt-4 mb-6 md:mb-8 opacity-100 italic">
+                    ČESKÝ POHÁR 8. - 10. KVĚTNA
+                </p>
+                <div class="inline-block">
+                    <span
+                        class="border-2 border-white px-4 py-2 md:px-6 md:py-3 font-bold text-sm md:text-lg tracking-widest whitespace-nowrap">
+                        WORLD MASTERS SERIES
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="news-section" class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-red-600">
+                <i data-lucide="megaphone"></i>
+                AKTUÁLNĚ
+            </h3>
+            <div id="news-content" class="text-lg text-slate-800 leading-relaxed font-semibold">
+            </div>
+        </div>
+    </section>
+
+    <section id="race-info" class="py-16 md:py-24 bg-slate-50 relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
+                PROGRAM ZÁVODŮ
+            </h3>
+            <div class="space-y-4 text-left">
+                <a href="https://oris.ceskyorientak.cz/Zavod?id=9676"
+                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E1</span>
+                    <div class="flex-1">
+                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Pátek
+                            8.5.2026</p>
+                        <h4 class="text-lg md:text-xl font-bold">MČR MASS START</h4>
+                    </div>
+                    <i data-lucide="https://oris.ceskyorientak.cz/Zavod?id=9676"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+                <a href="https://oris.ceskyorientak.cz/Zavod?id=9677"
+                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E2</span>
+                    <div class="flex-1">
+                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Sobota
+                            9.5.2026</p>
+                        <h4 class="text-lg md:text-xl font-bold">SPRINT</h4>
+                    </div>
+                    <i data-lucide="https://oris.ceskyorientak.cz/Zavod?id=9677"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+                <a href="https://oris.ceskyorientak.cz/Zavod?id=9678"
+                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E3</span>
+                    <div class="flex-1">
+                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Neděle
+                            10.5.2026</p>
+                        <h4 class="text-lg md:text-xl font-bold">MIDDLE</h4>
+                    </div>
+                    <i data-lucide="https://oris.ceskyorientak.cz/Zavod?id=9678"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="documents" class="py-16 md:py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
+                INFORMACE
+            </h3>
+            <div class="space-y-4 text-left">
+                <a href="bulletin1.pdf" target="_blank"
+                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <div class="w-16 md:w-20 flex justify-center"><i data-lucide="file-text"
+                            class="w-8 h-8 text-red-600"></i></div>
+                    <div class="flex-1">
+                        <h4 class="text-lg md:text-xl font-bold">BULLETIN 1</h4>
+                    </div>
+                    <i data-lucide="download"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+                <a href="bulletin2.pdf" target="_blank"
+                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <div class="w-16 md:w-20 flex justify-center"><i data-lucide="file-text"
+                            class="w-8 h-8 text-red-600"></i></div>
+                    <div class="flex-1">
+                        <h4 class="text-lg md:text-xl font-bold">BULLETIN 2</h4>
+                    </div>
+                    <i data-lucide="download"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+                <a href="pokyny.pdf" target="_blank" class="flex items-center p-4 md:p-6 rounded-lg etape-button group">
+                    <div class="w-16 md:w-20 flex justify-center"><i data-lucide="info"
+                            class="w-8 h-8 text-red-600"></i></div>
+                    <div class="flex-1">
+                        <h4 class="text-lg md:text-xl font-bold">POKYNY K ZÁVODU</h4>
+                    </div>
+                    <i data-lucide="download"
+                        class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 md:py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">
+                FOTOGALERIE
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
+                    <img src="fotogalerie/1.jpg" alt="Foto 1"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 1</div>'">
+                </div>
+                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
+                    <img src="fotogalerie/2.jpg" alt="Foto 2"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 2</div>'">
+                </div>
+                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
+                    <img src="fotogalerie/3.jpg" alt="Foto 3"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 3</div>'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto text-center px-6">
+            <img src="logoskloboukem.png" class="h-16 mx-auto mb-8 invert opacity-80">
+            <p class="opacity-50 text-sm tracking-widest uppercase">© 2026 GIGANT ORIENTEERING</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Skript pro podmíněné načtení a zobrazení aktualit
+        fetch('novinky.txt')
+            .then(response => {
+                if (!response.ok) throw new Error('Prázdné');
+                return response.text();
+            })
+            .then(text => {
+                const cleanText = text.trim();
+                // Zobrazí sekci jen pokud soubor obsahuje text
+                if (cleanText.length > 2) {
+                    document.getElementById('news-content').innerText = cleanText;
+                    document.getElementById('news-section').style.display = 'block';
+                }
+            })
+            .catch(err => {
+                console.log('Žádné novinky k zobrazení');
+            });
+    </script>
+</body>
+
+</html>
