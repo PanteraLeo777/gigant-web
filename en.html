@@ -7,6 +7,7 @@
     <title>Gigant Orienteering</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="nastaveni.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600&display=swap');
 
@@ -47,14 +48,16 @@
             border-bottom: 4px solid var(--accent-red);
         }
 
-        .etape-button {
+        /* Sjednocený styl panelů */
+        .content-panel {
             background-color: #f8fafc;
-            border-left: 8px solid var(--accent-red);
-            transition: background-color 0.2s ease;
+            border-left: 4px solid var(--accent-red);
+            transition: all 0.2s ease;
         }
 
-        .etape-button:hover {
+        .content-panel:hover {
             background-color: #ffffff;
+            transform: translateX(2px);
         }
 
         #news-section {
@@ -72,6 +75,7 @@
                 <img src="logoskloboukem.png" alt="Logo" class="h-16 w-auto object-contain">
             </div>
             <div class="flex flex-wrap justify-center gap-4 md:gap-8 font-bold text-sm text-slate-600 items-center">
+                <a href="#news-section" class="hover:text-red-600 transition uppercase">News</a>
                 <a href="#race-info" class="hover:text-red-600 transition">PROGRAMME</a>
                 <a href="#documents" class="hover:text-red-600 transition">INFO</a>
                 <a href="#gallery" class="hover:text-red-600 transition">FOTO</a>
@@ -96,59 +100,79 @@
                     <span class="text-4xl md:text-7xl block">MTBO</span>
                     <span class="text-3xl md:text-5xl block opacity-90">VIZOVICE 2026</span>
                 </h2>
-                <p class="text-base md:text-xl font-light mt-4 mb-6 md:mb-8 opacity-100 italic">CZECH CUP 8. - 10. MAY
+                <p class="text-base md:text-xl font-light mt-4 mb-6 md:mb-8 opacity-100 italic uppercase">CZECH CUP 8. -
+                    10. MAY
                 </p>
                 <div class="inline-block">
                     <span
-                        class="border-2 border-white px-4 py-2 md:px-6 md:py-3 font-bold text-sm md:text-lg tracking-widest whitespace-nowrap">WORLD
+                        class="border-2 border-white px-4 py-2 md:px-6 md:py-3 font-bold text-sm md:text-lg tracking-widest whitespace-nowrap uppercase">WORLD
                         MASTERS SERIES</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="news-section" class="py-12 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-red-600">
-                <i data-lucide="megaphone" class="w-5 h-5"></i> NEWS:
-            </h3>
-            <div id="news-content" class="text-base text-slate-800 font-semibold italic"></div>
+    <section id="news-section" class="py-16 bg-white border-b border-slate-100 scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 id="news-title-text"
+                class="text-3xl md:text-4xl font-bold pb-2 solid-red-underline inline-block px-4 mb-10"></h3>
+
+            <div id="news-container">
+                <img id="render-img" class="w-full h-auto rounded-lg shadow-md mb-6 hidden border border-slate-100"
+                    onerror="this.remove()">
+
+                <div class="content-panel p-6 md:p-8 rounded-lg text-left mb-8 shadow-sm">
+                    <h4 id="render-title" class="text-xl font-bold text-red-600 mb-2 uppercase"></h4>
+                    <p id="render-text" class="text-slate-700 leading-relaxed"></p>
+                    <a id="render-link" href="#" target="_blank"
+                        class="mt-4 inline-flex items-center gap-2 text-red-600 font-bold hover:underline"></a>
+                </div>
+
+                <details class="group bg-white border border-slate-200 rounded-lg overflow-hidden max-w-4xl mx-auto">
+                    <summary id="summary-text"
+                        class="p-3 cursor-pointer font-bold text-slate-400 hover:text-slate-600 hover:bg-slate-50 flex items-center justify-center gap-2 uppercase text-[11px] tracking-widest transition-colors">
+                    </summary>
+                    <div id="render-history"
+                        class="p-4 border-t border-slate-100 space-y-3 text-left bg-slate-50/30 text-sm"></div>
+                </details>
+            </div>
         </div>
     </section>
 
     <section id="race-info" class="scroll-mt-24 py-16 md:py-24 bg-slate-50 relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">PROGRAMME</h3>
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4 uppercase">
+                PROGRAMME</h3>
             <div class="space-y-4 text-left">
                 <a href="https://oris.ceskyorientak.cz/Zavod?id=9676"
-                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
-                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E1</span>
+                    class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600 uppercase">E1</span>
                     <div class="flex-1">
-                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Friday
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase font-bold tracking-tighter">Friday
                             8.5.2026</p>
-                        <h4 class="text-lg md:text-xl font-bold">MASS START</h4>
+                        <h4 class="text-lg md:text-xl font-bold uppercase">MASS START</h4>
                     </div>
                     <i data-lucide="external-link"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
                 </a>
                 <a href="https://oris.ceskyorientak.cz/Zavod?id=9677"
-                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
-                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E2</span>
+                    class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600 uppercase">E2</span>
                     <div class="flex-1">
-                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Saturday
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase font-bold tracking-tighter">Saturday
                             9.5.2026</p>
-                        <h4 class="text-lg md:text-xl font-bold">SPRINT</h4>
+                        <h4 class="text-lg md:text-xl font-bold uppercase">SPRINT</h4>
                     </div>
                     <i data-lucide="external-link"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
                 </a>
                 <a href="https://oris.ceskyorientak.cz/Zavod?id=9678"
-                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
-                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600">E3</span>
+                    class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
+                    <span class="text-2xl md:text-3xl font-bold w-16 md:w-20 text-red-600 uppercase">E3</span>
                     <div class="flex-1">
-                        <p class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter">Sunday
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase font-bold tracking-tighter">Sunday
                             10.5.2026</p>
-                        <h4 class="text-lg md:text-xl font-bold">MIDDLE</h4>
+                        <h4 class="text-lg md:text-xl font-bold uppercase">MIDDLE</h4>
                     </div>
                     <i data-lucide="external-link"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
@@ -159,24 +183,24 @@
 
     <section id="documents" class="scroll-mt-24 py-16 md:py-24 bg-white relative">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">INFORMATION</h3>
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4 uppercase">
+                INFORMATION</h3>
             <div class="space-y-4 text-left">
                 <a href="bulletin1.pdf" target="_blank"
-                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
+                    class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
                     <div class="w-16 md:w-20 flex justify-center"><i data-lucide="file-text"
                             class="w-8 h-8 text-red-600"></i></div>
                     <div class="flex-1">
-                        <h4 class="text-lg md:text-xl font-bold">BULLETIN 1</h4>
+                        <h4 class="text-lg md:text-xl font-bold uppercase">BULLETIN 1</h4>
                     </div>
                     <i data-lucide="download"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
                 </a>
-                <a href="error.html" 
-                    class="flex items-center p-4 md:p-6 rounded-lg etape-button group shadow-sm">
+                <a href="error.html" class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
                     <div class="w-16 md:w-20 flex justify-center"><i data-lucide="file-text"
                             class="w-8 h-8 text-red-600"></i></div>
                     <div class="flex-1">
-                        <h4 class="text-lg md:text-xl font-bold">BULLETIN 2</h4>
+                        <h4 class="text-lg md:text-xl font-bold uppercase">BULLETIN 2</h4>
                     </div>
                     <i data-lucide="download"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
@@ -187,20 +211,11 @@
 
     <section id="gallery" class="scroll-mt-24 py-16 md:py-24 bg-slate-100">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4">FOTOGALLERY</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
-                    <img src="fotogalerie/1.jpg" alt="Foto 1" class="w-full h-full"
-                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 1</div>'">
-                </div>
-                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
-                    <img src="fotogalerie/2.jpg" alt="Foto 2" class="w-full h-full"
-                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 2</div>'">
-                </div>
-                <div class="aspect-video bg-slate-300 rounded overflow-hidden">
-                    <img src="fotogalerie/3.jpg" alt="Foto 3" class="w-full h-full"
-                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-slate-500\'>NÁHLED 3</div>'">
-                </div>
+            <h3 class="text-3xl md:text-4xl font-bold mb-12 pb-2 solid-red-underline inline-block px-4 uppercase">
+                Fotogallery
+            </h3>
+
+            <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             </div>
         </div>
     </section>
@@ -213,7 +228,7 @@
                     <p class="opacity-50 text-sm tracking-widest uppercase">© 2026 GIGANT ORIENTEERING</p>
                 </div>
                 <div class="space-y-4">
-                    <h4 class="font-bold text-xl border-b border-slate-700 pb-2 inline-block">CONTACT US</h4>
+                    <h4 class="font-bold text-xl border-b border-slate-700 pb-2 inline-block uppercase">CONTACT US</h4>
                     <div class="flex flex-col gap-3 opacity-80">
                         <a href="mailto:info@gigantorienteering.cz"
                             class="flex items-center justify-center md:justify-start gap-3 hover:text-red-500 transition">
@@ -235,13 +250,70 @@
 
     <script>
         lucide.createIcons();
-        fetch('novinky-en.txt').then(r => r.text()).then(t => {
-            const c = t.trim();
-            if (c.length > 2) {
-                document.getElementById('news-content').innerText = c;
-                document.getElementById('news-section').style.display = 'block';
+
+        function buildNews(lang) {
+            const data = nastaveni[lang];
+            const section = document.getElementById('news-section');
+            if (nastaveni.skrytNovinky) { section.style.display = 'none'; return; }
+
+            section.style.display = 'block';
+            document.getElementById('news-title-text').innerText = data.nadpisSekce;
+            document.getElementById('summary-text').innerHTML = `<i data-lucide="history" class="w-3 h-3"></i> ` + data.tlacitkoHistorie;
+
+            const img = document.getElementById('render-img');
+            if (data.aktualni.obrazek) { img.src = data.aktualni.obrazek; img.classList.remove('hidden'); }
+
+            document.getElementById('render-title').innerText = data.aktualni.nadpis;
+            document.getElementById('render-text').innerText = data.aktualni.text;
+
+            const link = document.getElementById('render-link');
+            if (data.aktualni.odkaz) {
+                link.href = data.aktualni.odkaz;
+                link.innerText = data.aktualni.textOdkazu;
+                link.classList.remove('hidden');
+            } else { link.classList.add('hidden'); }
+
+            document.getElementById('render-history').innerHTML = data.historie.map(item => `
+                <div class="border-b border-slate-100 pb-2 last:border-0">
+                    <span class="text-red-600 font-bold text-[10px] uppercase tracking-wider">${item.datum}</span>
+                    <p class="text-slate-500 italic text-xs leading-relaxed">${item.zprava}</p>
+                </div>`).join('');
+            lucide.createIcons();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => buildNews('en'));
+
+        // Nastavení: Kolik fotek chceš maximálně zkusit načíst
+        const POCET_FOTEK = 20;
+
+        function nacistFotky() {
+            const grid = document.getElementById('photo-grid');
+
+            for (let i = 1; i <= POCET_FOTEK; i++) {
+                const div = document.createElement('div');
+                div.className = "aspect-video bg-slate-200 rounded overflow-hidden shadow-sm group relative cursor-pointer";
+
+                // Vytvoříme obrázek
+                const img = document.createElement('img');
+                img.src = `fotogalerie/${i}.jpg`;
+                img.alt = `Foto ${i}`;
+                img.className = "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110";
+
+                // Pokud fotka neexistuje (např. máš jich jen 12, ale limit je 20), tak se celý box smaže
+                img.onerror = function () {
+                    div.remove();
+                };
+
+                // Přidáme možnost kliknutí pro otevření fotky na celou obrazovku
+                div.onclick = () => window.open(img.src, '_blank');
+
+                div.appendChild(img);
+                grid.appendChild(div);
             }
-        });
+        }
+
+        // Spustíme načítání po načtení stránky
+        window.addEventListener('DOMContentLoaded', nacistFotky);
     </script>
 </body>
 
