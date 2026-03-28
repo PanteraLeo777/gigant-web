@@ -1,5 +1,5 @@
 const nastaveni = {
-    skrytNovinky: true, // true = schová novinky na obou webech, false = budou videt
+    skrytNovinky: false, // true = schová novinky na obou webech, false = budou videt
 
     // ČESKÁ VERZE
     cs: {
