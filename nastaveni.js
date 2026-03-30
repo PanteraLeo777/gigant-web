@@ -17,8 +17,8 @@ const nastaveni = {
             { datum: "4. 3. 2026", zprava: "Dal jsem si k snídani dort. Byl moc dobrej." },
             { datum: "1. 3. 2026", zprava: "Spuštěn web závodu Vizovice 2026." }
         ],
-        rozpisLink = 'rozpis.pdf',
-        pokynyLink = ''
+        rozpisLink: "rozpis.pdf",
+        pokynyLink: ""
     },
 
     // ANGLICKÁ VERZE
@@ -35,6 +35,8 @@ const nastaveni = {
         },
         historie: [
             { datum: "1. 3. 2026", zprava: "Vizovice 2026 website launched." }
-        ]
+        ],
+        rozpisLink: "bulletin1.pdf",
+        pokynyLink: ""
     }
 };
