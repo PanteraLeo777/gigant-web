@@ -265,8 +265,18 @@
 
             document.getElementById('render-title').innerText = data.aktualni.nadpis;
             document.getElementById('render-text').innerText = data.aktualni.text;
-            document.getElementById('rozpisLink').href = data.rozpisLink;
-            document.getElementById('pokynyLink').href = data.pokynyLink;
+            const rLink = document.getElementById('rozpisLink');
+            const pLink = document.getElementById('pokynyLink');
+            
+            if (data.rozpisLink) {
+                rLink.href = data.rozpisLink;
+            }
+            if (data.pokynyLink) {
+                pLink.href = data.pokynyLink;
+            } else {
+                pLink.href = "error.html";
+                rLink.href = "error.html";// Nebo nechat error.html, pokud link nemáš
+            }
 
             const link = document.getElementById('render-link');
             if (data.aktualni.odkaz) {
