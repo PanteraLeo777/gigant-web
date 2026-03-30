@@ -265,6 +265,8 @@
 
             document.getElementById('render-title').innerText = data.aktualni.nadpis;
             document.getElementById('render-text').innerText = data.aktualni.text;
+            document.getElementById('rozpisLink').href = data.rozpisLink;
+            document.getElementById('pokynyLink').href = data.pokynyLink;
 
             const link = document.getElementById('render-link');
             if (data.aktualni.odkaz) {
