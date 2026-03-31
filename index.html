@@ -195,7 +195,8 @@
                     <i data-lucide="download"
                         class="text-slate-300 group-hover:text-red-600 w-5 h-5 transition-colors"></i>
                 </a>
-                <a id='pokynyLink' href="error.html" class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
+                <a id='pokynyLink' href="error.html"
+                    class="flex items-center p-6 rounded-lg content-panel group shadow-sm">
                     <div class="w-16 md:w-20 flex justify-center"><i data-lucide="file-text"
                             class="w-8 h-8 text-red-600"></i></div>
                     <div class="flex-1">
@@ -266,15 +267,16 @@
             document.getElementById('render-text').innerText = data.aktualni.text;
             const rLink = document.getElementById('rozpisLink');
             const pLink = document.getElementById('pokynyLink');
-            
+
             if (data.rozpisLink) {
                 rLink.href = data.rozpisLink;
+            } else {
+                rLink.href = "error.html";
             }
             if (data.pokynyLink) {
                 pLink.href = data.pokynyLink;
             } else {
                 pLink.href = "error.html";
-                rLink.href = "error.html";// Nebo nechat error.html, pokud link nemáš
             }
 
             const link = document.getElementById('render-link');
