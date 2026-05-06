@@ -29,7 +29,7 @@ Pro zpestření Vás čekají kromě rychlých pasáží náročných spíše na
             { datum: "1. 3. 2026", zprava: "Spuštěn web závodu Vizovice 2026." }
         ],
         rozpisLink: "https://drive.google.com/file/d/1x02pduSMuqxibRt0QIsmLdgY3b0UpXkI/view?usp=sharing",
-        pokynyLink: ""
+        pokynyLink: "https://drive.google.com/file/d/1x02pduSMuqxibRt0QIsmLdgY3b0UpXkI/view"
     },
 
     // ANGLICKÁ VERZE
@@ -48,6 +48,6 @@ Pro zpestření Vás čekají kromě rychlých pasáží náročných spíše na
             { datum: "1. 3. 2026", zprava: "Vizovice 2026 website launched." }
         ],
         rozpisLink: "https://drive.google.com/file/d/1TmWOehTPU4RtRZsmBk1DF4YjIi2m7F1_/view?usp=sharing",
-        pokynyLink: ""
+        pokynyLink: "https://drive.google.com/file/d/136N-MA-XQd3Gr_T58infwmeIAWQ_4fyT/view"
     }
 };
