@@ -2,7 +2,7 @@ const nastaveni = {
     skrytNovinky: false, // true = schová novinky na obou webech, false = budou videt
 
     // ČESKÁ VERZE
-    cs: {
+    cs: {https://www.rajce.idnes.cz/ludekvalik/album/260509-mtbo-vizovice?utm_source=notification&utm_medium=email&utm_campaign=album-created
         nadpisSekce: "Aktuality",
         tlacitkoHistorie: "Zobrazit historii",
         tlacitkoZavrit: "Skrýt historii",
