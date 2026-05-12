@@ -233,6 +233,22 @@
             <div id="photo-grid" class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 w-full">
                 </div>
 
+            </div><div class="mt-12 pt-8 border-t border-slate-200">
+            <h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">Kompletní fotoalba</h4>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-4">
+                <a href="https://eu.zonerama.com/karltheczechcyclist/Album/15290357" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-red-600 transition-colors font-bold uppercase text-xs md:text-sm">
+                    <i data-lucide="external-link" class="w-4 h-4"></i> Fotoalbum Massák
+                </a>
+                <a href="https://eu.zonerama.com/karltheczechcyclist/Album/15290491" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-red-600 transition-colors font-bold uppercase text-xs md:text-sm">
+                    <i data-lucide="external-link" class="w-4 h-4"></i> Fotoalbum Sprint
+                </a>
+                <a href="https://eu.zonerama.com/karltheczechcyclist/Album/15290527" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-red-600 transition-colors font-bold uppercase text-xs md:text-sm">
+                    <i data-lucide="external-link" class="w-4 h-4"></i> Fotoalbum Middle
+                </a>
+            </div>
+        </div>
+        </div>
+
         </div>
     </div>
 </section>
@@ -325,7 +341,7 @@
 
                 // Vytvoříme obrázek
                 const img = document.createElement('img');
-                img.src = `fotogalerie/ (${i}).jpg`;
+                img.src = `fotogalerie/${i}.jpg`;
                 img.alt = `Foto ${i}`;
                 img.className = "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110";
 
