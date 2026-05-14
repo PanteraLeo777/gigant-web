@@ -8,9 +8,9 @@ const nastaveni = {
         tlacitkoZavrit: "Skrýt historii",
         aktualni: {
             nadpis: "Už jsou fotky!",
-            text: ` První fotky jsou tady a další ještě přijdou. Fotky z vyhlášení jsou od našho fotografa Karla Smolena dole ve fotogalerii.`,
-            odkaz: "https://www.rajce.idnes.cz/ludekvalik/album/260509-mtbo-vizovice?utm_source=notification&utm_medium=email&utm_campaign=album-created", // nech prázdný "", pokud nechceš odkaz
-            textOdkazu: "Link na fotky zde",
+            text: ` Fotky ze závodů najdete dole ve fotogalerii.`,
+            odkaz: "#gallery", // nech prázdný "", pokud nechceš odkaz
+            textOdkazu: "Fotky ↓",
             obrazek: "letak_verze_2.jpg" // nech prázdný "", pokud nechceš obrázek
         },
         historie: [
@@ -39,9 +39,9 @@ const nastaveni = {
         tlacitkoZavrit: "Hide History",
         aktualni: {
             nadpis: "PHOTOS",
-            text: "The first batch of photos are at this link, with more down in the fotogallery section",
-            odkaz: "https://www.rajce.idnes.cz/ludekvalik/album/260509-mtbo-vizovice?utm_source=notification&utm_medium=email&utm_campaign=album-created",
-            textOdkazu: "Foto link here",
+            text: "Photos from the races are donw in the gallery",
+            odkaz: "#gallery", // nech prázdný "", pokud nechceš odkaz
+            textOdkazu: "Fotos ↓",
             obrazek: "letak_verze_2.jpg"
         },
         historie: [
